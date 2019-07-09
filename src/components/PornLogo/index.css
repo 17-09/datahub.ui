@@ -1,0 +1,16 @@
+.hub {
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hub span {
+  padding: 3px;
+  display: inline-block;
+}
+
+.hub span:nth-child(2) {
+  background: #ff9900;
+  color: #000000;
+}

@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
+// import React from 'react';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import Layout from './components/VerticalLayout';
+// import AuthorizeRoute from './components/AuthorizeRoute';
+
+// import './App.css';
+// import ImportFile from './containers/ImportFile';
+// import Login from './components/Login';
+// import Dashboard from './containers/Dashboard';
+// import Field from './containers/Field';
+// import Contact from './containers/Contact';
+
+// function App() {
+//   return (
+//     <Router>
+//       <div>
+//         <Layout>
+//           <Route exact path="/" component={Dashboard} />
+//           <Route exact path="/login" component={Login} />
+//           <AuthorizeRoute exact path="/files" component={ImportFile} />
+//           <AuthorizeRoute exact path="/fields" component={Field} />
+//           <AuthorizeRoute exact path="/contacts" component={Contact} />
+//         </Layout>
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Layout from 'components/LayoutBase';
+
+import routes from 'config/routes';
+import menus from 'config/menus';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Layout menus={menus}>
+          {routes.map(route => (
+            <Route key={route.path} exact path={route.path} component={route.component} />
+          ))}
+        </Layout>
+      </Router>
+    );
+  }
 }
 
 export default App;
