@@ -13,8 +13,14 @@ const menus = [
     link: '/contacts',
   },
   {
-    key: 'files',
+    key: 'files/import',
     name: 'Import File',
+    icon: 'code-sandbox',
+    link: '/files/import',
+  },
+  {
+    key: 'files',
+    name: 'Files',
     icon: 'code-sandbox',
     link: '/files',
   },

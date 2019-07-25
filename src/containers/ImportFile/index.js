@@ -67,7 +67,7 @@ export default class ImportFile extends Component {
       spinning: true,
     });
     try {
-      const url = makeUrl('files');
+      const url = makeUrl('files/upload');
       const formData = new FormData();
       formData.append('file', this.state.file);
 

@@ -1,0 +1,39 @@
+.ant-layout {
+  background-color: #fff;
+}
+
+.ant-card-small > .ant-card-body {
+  padding: 0px;
+}
+
+.ant-statistic-title {
+  text-align: center;
+}
+
+
+.ant-statistic-title {
+  font-size: 12px;
+}
+
+.ant-statistic-content-value {
+  text-align: center;
+}
+
+.ant-statistic-content {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-statistic-content-value {
+  display: inline-block;
+}
+
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+  padding: 8px 8px;
+  font-size: 12px;
+}
+
+.ant-table-pagination.ant-pagination {
+  float: right;
+  margin: 5px 0;
+}
